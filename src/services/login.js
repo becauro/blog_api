@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
-const segredo = process.env.JWT_SECRET; // << Chave "secreta"
+const segredo = process.env.JWT_SECRET;
 
 const jwtConfig = {
   algorithm: 'HS256',
