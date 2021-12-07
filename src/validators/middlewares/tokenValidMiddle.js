@@ -1,5 +1,4 @@
 const jwt = require('jsonwebtoken');
-require('dotenv').config();
 
 const STATUS_UNAUTHORIZED = 401;
 const MSG_MISSING_TOKEN = 'Token not found';
