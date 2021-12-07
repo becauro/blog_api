@@ -11,15 +11,6 @@ app.get('/', (request, response) => {
   });
 // não remova esse endpoint, e para o avaliador funcionar
 
-app.get('/ping', (_req, res) => res.send('tá rodando de boa')); // Para teste de rota
-
-// app.post('/teste', (req, res) => { // Para teste de rota
-//   const { body } = req;
-//   const { displayName } = body;
-
-//   // res.json({ message: ` aqui o body: ${body}` }); 
-// });
-
 app.use('/user', user);
 app.use('/login', login);
 app.use('/categories', category);
