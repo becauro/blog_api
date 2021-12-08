@@ -33,6 +33,25 @@ const getAll = async () => {
   }
 };
 
+const getAllFiltered = async (query) => {
+  const { q } = query;
+
+  if (!q) return getAll();
+  
+  try {
+    const result = await BlogPost.findAll({ 
+      include: [
+        { model: User, as: 'user', attributes: { exclude: ['password'] } },
+        { model: Category, as: 'categories', through: { attributes: [] } },
+      ],
+    });
+
+    return result;
+  } catch (error) {
+    return error;
+  }
+};
+
 const getById = async (id) => {
   try {
     const result = await BlogPost.findByPk(id, { 
@@ -127,4 +146,11 @@ const deleteIt = async (expressParams, postId) => {
   }
 };
 
-module.exports = { createIt, getAll, getById, getByIdTwo, updateIt, deleteIt };
+module.exports = { 
+  createIt, 
+  getAll, 
+  getById, 
+  getByIdTwo, 
+  updateIt, 
+  deleteIt,
+  getAllFiltered };
