@@ -5,6 +5,7 @@ const tokenValidMiddle = require('../validators/middlewares/tokenValidMiddle');
 
 const STATUS_CREATED = 201;
 const STATUS_OK = 200;
+const STATUS_NO_CONTENT = 204;
 
 router.get('/', tokenValidMiddle, async (_req, res, next) => {
   try {
@@ -37,6 +38,18 @@ router.get('/:id', tokenValidMiddle, async (req, res, next) => {
     if (result.message) return next(result);
   
     res.status(STATUS_OK).json(result);
+  } catch (error) {
+    next(error);
+  }
+});
+
+router.delete('/me', tokenValidMiddle, async (req, res, next) => {
+  const { id: userId } = req.user;
+
+  try {
+    await user.deleteIt(userId);
+  
+    res.status(STATUS_NO_CONTENT).end();
   } catch (error) {
     next(error);
   }
