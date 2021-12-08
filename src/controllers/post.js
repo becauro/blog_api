@@ -26,6 +26,17 @@ router.get('/', tokenValidMiddle, async (_req, res, next) => {
   }
 });
 
+router.get('/search', tokenValidMiddle, async (req, res, next) => {
+  const { query } = req;
+  try {
+    const result = await post.getAllFiltered(query);
+  
+    res.status(STATUS_OK).json(result);
+  } catch (error) {
+    next(error);
+  }
+});
+
 router.post('/', tokenValidMiddle, postValidMiddle, async (req, res, next) => {
     const { body, user, categories } = req;
     
