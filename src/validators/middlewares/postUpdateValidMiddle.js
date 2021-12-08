@@ -14,7 +14,8 @@ const MSG_EMPTY_CONTENT = '"content" is not allowed to be empty';
 const MSG_POST_NOT_FOUND = 'Post does not exist';
 const MSG_CATEGORYIDS_FOUND = 'Categories cannot be edited';
 
-/** This block is commented for Future implementation of 'categoryId updation' feature
+/** This block is commented for Future implementation of 'categoriesValidator' feature,
+ * which has to do with the comments in SERVICE about 'router.put('/:id'' feature.
 
 const MSG_MISSING_CATEGORY = '"categoryIds" is required';
 const MSG_EMPTY_CATEGORY = '"categoryIds" is not allowed to be empty';

@@ -11,11 +11,11 @@ const STATUS_NO_CONTENT = 204;
 const createPostsCategories = async (createdPost, categories) => {
   createdPost.addCategories(categories);
 };
-
-// const updatePostsCategories = async (updatedPost, categories) => {
-//   updatedPost.setCategories(categories);
-// };
-
+/** This block is commented for Future new feature in 'router.put('/:id' feature
+const updatePostsCategories = async (updatedPost, categories) => {
+  updatedPost.setCategories(categories);
+};
+*/
 router.get('/', tokenValidMiddle, async (_req, res, next) => {
   try {
     const result = await post.getAll();
@@ -64,11 +64,11 @@ router.get('/:id', tokenValidMiddle, async (req, res, next) => {
 router.put('/:id', tokenValidMiddle, postUpdateValidMiddle, async (req, res, next) => {
   const { id: postId } = req.params;
   const { body } = req;
-  // const { body, categories } = req;
+  // const { body, categories } = req; // commented for Future new feature
   try {
     const result = await post.updateIt({ postId, body });
     if (result.message) return next(result);
-    // updatePostsCategories(result, categories);
+    // updatePostsCategories(result, categories); commented for Future new feature
 
     res.status(STATUS_OK).json(result);
   } catch (error) {
