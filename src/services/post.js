@@ -1,3 +1,4 @@
+const { Op } = require('sequelize'); 
 const { BlogPost, User, Category } = require('../models');
 
 const STATUS_NOT_FOUND = 404;
@@ -33,17 +34,20 @@ const getAll = async () => {
   }
 };
 
-const getAllFiltered = async (query) => {
+const getAllFiltered = async (query) => { // source: https://sequelize.org/master/manual/model-querying-basics.html#operators
   const { q } = query;
 
   if (!q) return getAll();
-  
+
   try {
     const result = await BlogPost.findAll({ 
       include: [
         { model: User, as: 'user', attributes: { exclude: ['password'] } },
         { model: Category, as: 'categories', through: { attributes: [] } },
       ],
+      where: { 
+        [Op.or]: [{ title: { [Op.regexp]: `${q}` } }, { content: { [Op.regexp]: `${q}` } }],
+      },
     });
 
     return result;
