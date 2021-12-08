@@ -3,7 +3,7 @@ const { User } = require('../models');
 const STATUS_NOT_FOUND = 404;
 const MSG_USER_NOT_FOUND = 'User does not exist';
 
-const getAll = async () => { // For model test
+const getAll = async () => {
   try {
     const result = await User.findAll();
 
@@ -39,4 +39,12 @@ const getById = async (id) => {
   }
 };
 
-module.exports = { getAll, createIt, getById };
+const deleteIt = async (userId) => {
+  try {
+    await User.destroy({ where: { id: userId } });
+  } catch (error) {
+    return error;
+  }
+};
+
+module.exports = { getAll, createIt, getById, deleteIt };

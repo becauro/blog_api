@@ -122,6 +122,7 @@ const deleteIt = async (expressParams, postId) => {
     await postValidator(expressParams);
 
     await BlogPost.destroy(postId);
+    // await BlogPost.destroy({ where: { id: postId } });
   } catch (error) {
     return error;
   }
