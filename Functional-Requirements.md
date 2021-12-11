@@ -1,4 +1,5 @@
 # Requisitos funcionais
+<a href="https://github.com/becauro/blog_api/tree/develop"> Página inicial </a>
 
 Nesse readme é descrito cada **requisito funcional** do projeto.
 
@@ -16,7 +17,6 @@ Nesse readme é descrito cada **requisito funcional** do projeto.
   - [8 - A aplicação deve ter o endpoint GET `/post`](#8---a-aplicação-deve-ter-o-endpoint-get-post)
   - [9 - A aplicação deve ter o endpoint GET `post/:id`](#9---a-aplicação-deve-ter-o-endpoint-get-postid)
   - [10 - A aplicação deve ter o endpoint PUT `/post/:id`](#10---a-aplicação-deve-ter-o-endpoint-put-postid)
-  - [Requisitos Bônus](#requisitos-bônus)
   - [11 - A aplicação deve ter o endpoint DELETE `post/:id`](#11---a-aplicação-deve-ter-o-endpoint-delete-postid)
   - [12 - A aplicação deve ter o endpoint DELETE `/user/me`](#12---a-aplicação-deve-ter-o-endpoint-delete-userme)
   - [13 - A aplicação deve ter o endpoint GET `post/search?q=:searchTerm`](#13---a-aplicação-deve-ter-o-endpoint-get-postsearchqsearchterm)
