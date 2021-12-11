@@ -1,6 +1,6 @@
 # Boas vindas ao repositório do Blog API!
 
-Esse projeto é uma API de um Blog, onde será possível criar, visualizar, deletar e atualizar os posts e usuário. Ou seja, um CRUD.
+Esse projeto é uma API de um Blog, onde será possível criar, visualizar, deletar e atualizar os posts e usuários. Ou seja, um CRUD.
 
 ---
 
@@ -325,7 +325,7 @@ Se o token for inválido o resultado retornado deverá ser conforme exibido abai
 
 ![Token inválido](./public/tokeninvalido.png)
 
-## 4 - Sua aplicação deve ter o endpoint GET `/user/:id`
+## 4 - A aplicação deve ter o endpoint GET `/user/:id`
 
 ### Os seguintes pontos precisam ser implementados:
 
@@ -368,7 +368,7 @@ Se o token for inválido o resultado retornado deverá ser conforme exibido abai
 
 ![Listar um usuário com token inválido](./public/tokeninvalidoumusuario.png)
 
-## 5 - Sua aplicação deve ter o endpoint POST `/categories`
+## 5 - A aplicação deve ter o endpoint POST `/categories`
 
 ### Os seguintes pontos precisam ser implementados:
 
@@ -409,7 +409,7 @@ Se o token for inexistente o resultado retornado deverá ser conforme exibido ab
 
 ![Cadastrar uma categoria sem token](./public/cadastrarcategoriasemtoken.png)
 
-## 6 - Sua aplicação deve ter o endpoint GET `/categories`
+## 6 - A aplicação deve ter o endpoint GET `/categories`
 
 ### Os seguintes pontos precisam ser implementados:
 
@@ -450,7 +450,7 @@ Se o token for inexistente o resultado retornado deverá ser conforme exibido ab
 ![Buscar uma categoria sem token](./public/buscarcategoriasemtoken.png)
 
 
-## 7 - Sua aplicação deve ter o endpoint POST `/post`
+## 7 - A aplicação deve ter o endpoint POST `/post`
 
 ### Os seguintes pontos precisam ser implementados:
 
@@ -512,7 +512,7 @@ Se o token for inválido o resultado retornado deverá ser conforme exibido abai
 
 ![blogpost com token inválido](./public/criarposttokeninvalido.png)
 
-## 8 - Sua aplicação deve ter o endpoint GET `/post`
+## 8 - A aplicação deve ter o endpoint GET `/post`
 
 ### Os seguintes pontos precisam ser implementados:
 
@@ -563,7 +563,7 @@ Se o token for inválido o resultado retornado deverá ser conforme exibido abai
 
 ![blogpost com token inválido](./public/listarposttokeninvalido.png)
 
-## 9 - Sua aplicação deve ter o endpoint GET `post/:id`
+## 9 - A aplicação deve ter o endpoint GET `post/:id`
 
 ### Os seguintes pontos precisam ser implementados:
 
@@ -620,7 +620,7 @@ Se o id do post for inválido o resultado retornado deverá ser conforme exibido
 
 
 
-## 10 - Sua aplicação deve ter o endpoint PUT `/post/:id`
+## 10 - A aplicação deve ter o endpoint PUT `/post/:id`
 
 ### Os seguintes pontos precisam ser implementados:
 
@@ -688,9 +688,9 @@ Se não conter o campo `content` o resultado retornado deverá ser conforme exib
 
 ![blogpost com token inválido](./public/editarsemcontent.png)
 
-## Requisitos Bônus
 
-## 11 - Sua aplicação deve ter o endpoint DELETE `post/:id`
+
+## 11 - A aplicação deve ter o endpoint DELETE `post/:id`
 
 ### Os seguintes pontos precisam ser implementados:
 
@@ -734,7 +734,7 @@ Se o token for inválido o resultado retornado deverá ser conforme exibido abai
 
 ![blogpost com token inválido](./public/deletarpostcomtokeninvalido.png)
 
-## 12 - Sua aplicação deve ter o endpoint DELETE `/user/me`
+## 12 - A aplicação deve ter o endpoint DELETE `/user/me`
 
 ### Os seguintes pontos precisam ser implementados:
 
@@ -760,7 +760,7 @@ Se não conter o token o resultado retornado deverá ser conforme exibido abaixo
 
 ![Deletar sem token](./public/deletarsemtoken.png)
 
-## 13 - Sua aplicação deve ter o endpoint GET `post/search?q=:searchTerm`
+## 13 - A aplicação deve ter o endpoint GET `post/search?q=:searchTerm`
 
 ### Os seguintes pontosprecisam ser implementados:
 
