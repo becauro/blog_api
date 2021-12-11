@@ -78,14 +78,14 @@ Se o usuário tiver o campo "displayName" menor que 8 caracteres o resultado ret
 ![Nome menor que 8](./public/nomemenorque8.png)
 (As contrabarras `\` estão escapando as aspas de dentro da string)
 
-**[Validar que não é possível cadastrar usuário com o campo `email` com formato `email: rubinho`]**
+**[Validar que não é possível cadastrar usuário com o campo `email` com formato email: `rubinho`]**
 
 Se o usuário tiver o campo "email" com o formato `email: rubinho` o resultado retornado deverá ser conforme exibido abaixo, com um status http `400`:
 
 ![Email inválido](./public/emailinvalido.png)
 (As contrabarras `\` estão escapando as aspas de dentro da string)
 
-**[Validar que não é possível cadastrar usuário com o campo `email` com formato `email: @gmail.com`]**
+**[Validar que não é possível cadastrar usuário com o campo `email` com formato de email: `@gmail.com`]**
 
 Se o usuário tiver o campo "email" com o formato `email: @gmail.com` o resultado retornado deverá ser conforme exibido abaixo, com um status http `400`:
 
