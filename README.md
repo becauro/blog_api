@@ -1,26 +1,31 @@
-# Boas vindas ao repositório do Blog API!
+# Boas vindas ao repositório do **Blog API**
 
-Esse projeto é uma API de um Blog, onde será possível criar, visualizar, deletar e atualizar os posts e usuários. Ou seja, um CRUD.
+Nessa API é possível **criar**, **visualizar**, **deletar** e **atualizar** os `posts` e seus respectivos `usuários`. Ou seja, nada mais do que um **CRUD**, porém utilizando boas práticas modernas de desenvolvimento de software, bem como uso de funcionalidades como **autenticação** e **autorização** de usuário.
 
 ---
 
-# <span id="sumario">Sumário</span>
+## <span id="sumario">Sumário</span>
 
 - [Habilidades](#habilidades)
 - [Descrição](#descrição)
+- [Arquitetura e padrões](#arquitetura-e-padroes)
+- [Tecnologias utilizadas](#tecnologias-utilizadas)
+- [Dependências](#dependencias)
+- [Requisitos para execução e consumo da API](#requisitos-execucao)
+- [Como executar o projeto](#como-executar-o-projeto)
 - [Linter](#linter)
 - [Observações](#-observações)
 - [Requisitos funcionais](#requisitos-funcionais)
   
-# Habilidades 
+## Habilidades 
 
-Nesse projeto, você vai construir um back-end usando `ORM` com o pacote `sequelize` do `npm`, e será capaz de:
- - Criar e associar tabelas usando `models` do `sequelize`
- - Construir endpoints para consumir os models que criar 
- - Fazer um `CRUD` com o `ORM`
+Nesse projeto, foi construído um back-end usando `ORM` com o pacote `sequelize` do `npm`, tendo por objetivo ser capaz de:
+ - Criar e associar tabelas usando `models` do `sequelize`;
+ - Construir endpoints para consumir os models que criados; 
+ - Fazer um `CRUD` com completo usando o `ORM`.
 
 
-# Descrição
+## Descrição
 
 Se trata de uma API de um CRUD de posts e usuários de um blog (com o sequelize). Começando pela API, foi desenvolvido alguns endpoints (seguindo os princípios do REST) que estarão conectados ao seu banco de dados. Aplicando, também, alguns princípios SOLID!
 
@@ -36,33 +41,72 @@ Portanto existem as seguintes referências no schema do banco:
 
 ---
 
-
-# Linter
+## <span id="arquitetura-e-padroes">Arquitetura e Padrões</span>
 <a href="#sumario">Sumário</a>
 
-Para garantir a qualidade do código, usaremos o [ESLint](https://eslint.org/) para fazer a sua análise estática.
+* Arquitetura MSC
+* API RESTfull
+* SOLID
 
-Este projeto já vem com as dependências relacionadas ao _linter_ configuradas nos arquivos `package.json`.
+## <span id="tecnologias-utilizadas">Tecnologias utilizadas</span>
+<a href="#sumario">Sumário</a>
 
-Para poder rodar os `ESLint` em um projeto basta executar o comando `npm install` dentro do projeto e depois `npm run lint`. Se a análise do `ESLint` encontrar problemas no código, tais problemas serão mostrados no seu terminal. Se não houver problema no código, nada será impresso no seu terminal.
+* Node.js
+* Express
+* MySQL
+* JSON Web Token (JWT)
+* Sequelize
+* ESLinter
 
-Também pode-se instalar o plugin do `ESLint` no `VSCode` (caso use essa IDE), e para isso bastar ir na seção **extensions** e baixar o [plugin `ESLint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
+## <span id="dependencias">Dependências</span>
+<a href="#sumario">Sumário</a>
+
+No arquivo `package.json` é listado as dependências necessárias.
+Para instalar essas dependências, estando conectado a internet e dentro da pasta do repositório, basta digitar o seguinte comando:
+
+    `npm install`
+
+## <span id="requisitos-execucao">Requisitos para execução e consumo da API</span>
+<a href="#sumario">Sumário</a>
+
+1. **Node.js**
+2. **MySQL**
+3. **Porta 3000** disponível, ou configurar outra.
+4. **Algum cliente de teste de API** (ex.: Postman, Insomnia e etc) para fazer todas requisições possíveis.
+
+## Como Executar o projeto
+
+Instalado os requisitos e as dependências necessárias, basta seguir as seguintes etapas:
+
+1. Dentro pasta do projeto, execute o comando: `npm start`.
+2. Em seguida, abra algum cliente de API (ex.: Postman, Insomnia e etc) e faça as requisições para as rotas de **http://localhost:3000** (A porta 3000 está como padrão na ausência de variável de ambiente).
+
+## Linter
+<a href="#sumario">Sumário</a>
+
+Para garantir a qualidade do código, foi usado o [ESLint](https://eslint.org/) para fazer uma análise estática.
+
+O projeto já vem com as dependências relacionadas ao _linter_ configuradas nos arquivos `package.json`.
+
+Para utilizar o avaliador `ESLint`, após executar o comando `npm install` dentro do projeto, basta usar o comando `npm run lint`. Se a análise do `ESLint` encontrar problemas no código, tais problemas serão mostrados no terminal. Se não houver problema, nada será impresso no seu terminal.
+
+Alternativamente pode-se instalar o plugin do `ESLint` no `VSCode` (caso use essa IDE), e para isso bastar ir na seção **extensions** e baixar o [plugin `ESLint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
 
 
 ---
 
-# Observações:
+## Observações:
 <a href="#sumario">Sumário</a>
 
-## Estrutura da lista de requsitos funcionais
+### Estrutura da lista de requsitos funcionais
 
 - Em cada requisito você encontrará uma imagem de um protótipo de como sua aplicação deve ficar. 
 
-## Dados de testes no banco
+### Dados de testes no banco
 
 - Há um arquivo na pasta `/seeders` dentro dela irá há querys para inserir dados no banco para que se possa utilizar aplicação com alguns dados (fictícios) no banco. 
 
-## A estrutura do banco de dados:
+### A estrutura do banco de dados:
 
 
 - Contém uma tabela chamada **Users**, contendo dados com a seguinte estrutura::
@@ -111,7 +155,7 @@ Também pode-se instalar o plugin do `ESLint` no `VSCode` (caso use essa IDE), e
 
 ---
 
-# Requisitos funcionais
+## Requisitos funcionais
 <a href="#sumario">Sumário</a>
 
-Acesse o **readme** dos requisitos funcionais [aqui](Functional-Requirements.md)
+Acesse  [aqui](Functional-Requirements.md) o **readme** dos requisitos funcionais.
