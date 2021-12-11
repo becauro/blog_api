@@ -29,17 +29,19 @@ Nesse projeto, foi construído um back-end usando `ORM` com o pacote `sequelize`
 
 Se trata de uma API de um CRUD de posts e usuários de um blog. Começando pela API, foi desenvolvido alguns endpoints (seguindo os princípios do REST) que estarão conectados ao seu banco de dados. Aplicando, também, alguns princípios SOLID!
 
-Primeiro, foi criado uma tabela para os usuários que desejam se cadastrar na aplicação. Após isso, foi criado uma tabela de Categorias para seus Posts, outra para guardar todas as informações dos posts realizados na plataforma. Por fim uma tabela de junção para relacionar Posts com categorias. Ou seja, um post pode ter mais que uma categoria.
+Primeiro, foi criado uma tabela para os usuários que desejam se cadastrar na aplicação. Após isso, uma tabela de Categorias também foi criada para se realcionar com cada Posts e então outra é criada para guardar todas as informações dos posts que vão sendo criados na plataforma. Por fim uma última tabela foi necessária para relacionamento entre Posts e categorias. Ou seja, um post pode ter mais que uma categoria e vice-versa.
 
-Cada usuário, além de criar seus posts, só podem atualizar e excluir seus próprios posts, bem como é o único capaz de excluir a sua conta de login do sistema.
+Cada usuário, além de criar seus posts, só pode atualizar e excluir seus próprios posts, bem como é o único também capaz de apagar sua própria conta do sistema.
 
-Cada post tem referência ao usuário que o criou.
-Portanto existem as seguintes referências no schema do banco:
+Cada post recebe uma referência ao usuário que o criou.
+Portanto o relacionamento entre as tabelas do banco fica da seguinte forma:
 
 - **Usuário / Post (1:N)**
-  - Um _usuário_ tem muitos posts  e cada _post_ pertence a um _usuário_
+  - Um _usuário_ tem muitos _posts_;
+  - Cada _post_ pertence apenas a um _usuário_
+
 - **Post / Categoria (N:N)**
-  - Cada _categoria_ está relacionada com vários posts
+  - Cada _categoria_ está relacionada com vários _posts_;
   - Cada _post_ pode ter várias _categorias_
 
 ---
