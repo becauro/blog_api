@@ -112,7 +112,7 @@ Alternativamente pode-se instalar o plugin do `ESLint` no `VSCode` (caso use ess
 
 - Em cada requisito você encontrará uma imagem de um protótipo de como sua aplicação deve ficar. 
 
-### Dados uso do banco
+### Dados para uso do banco
 
 - Há um arquivo na pasta `/seeders` dentro dela irá há querys para inserir dados no banco para que se possa utilizar aplicação com alguns dados (fictícios) no banco. 
 
