@@ -19,7 +19,7 @@ Nessa API é possível **criar**, **visualizar**, **deletar** e **atualizar** os
   
 ## Habilidades 
 
-Nesse projeto, foi construído um back-end usando `ORM` com o pacote `sequelize` do `npm`, tendo por objetivo ser capaz de praticar as skills como:
+Nesse projeto, foi construído um back-end usando `ORM` com o pacote `sequelize` do `npm`, tendo por objetivo praticar skills como:
  - Criar e associar tabelas usando `models` do `sequelize`;
  - Construir endpoints para consumir os models criados; 
  - Fazer um `CRUD` moderno e completo usando o `ORM`.
@@ -27,18 +27,20 @@ Nesse projeto, foi construído um back-end usando `ORM` com o pacote `sequelize`
 
 ## Descrição
 
-Se trata de uma API de um CRUD de posts e usuários de um blog. Começando pela API, foi desenvolvido alguns endpoints (seguindo os princípios do REST) que estarão conectados ao seu banco de dados. Aplicando, também, alguns princípios SOLID!
+Se trata de uma API que manipula **posts** e **usuários criadores dos posts** de um Blog.
 
-Primeiro, foi criado uma tabela para os usuários que desejam se cadastrar na aplicação. Após isso, uma tabela de Categorias também foi criada para se realcionar com cada Posts e então outra é criada para guardar todas as informações dos posts que vão sendo criados na plataforma. Por fim uma última tabela foi necessária para relacionamento entre Posts e categorias. Ou seja, um post pode ter mais que uma categoria e vice-versa.
+Começando pela API, foi desenvolvido alguns ENDPOINTS seguindo os princípios do REST que se conectam a um banco de dados relacional.
 
-Cada usuário, além de criar seus posts, só pode atualizar e excluir seus próprios posts, bem como é o único também capaz de apagar sua própria conta do sistema.
+Primeiro, foi criado uma tabela para os usuários que desejam se cadastrar na aplicação afim de criarem posts no Blog. Após isso, uma tabela de Categorias também foi criada para se relacionar com cada Posts e então outra é criada para guardar todas as informações dos posts que vão sendo criados na plataforma. Por fim uma última tabela foi necessária para se implementar o relacionamento entre Posts e categorias. Ou seja, um post pode ter mais que uma categoria e vice-versa.
+
+Cada usuário, além de criar seus posts, é capaz de atualizar e excluir seus próprios posts, bem como é o único que consegue apagar sua própria conta do sistema.
 
 Cada post recebe uma referência ao usuário que o criou.
-Portanto o relacionamento entre as tabelas do banco fica da seguinte forma:
+Portanto, os relacionamentos entre as tabelas do banco ficam da seguinte forma:
 
 - **Usuário / Post (1:N)**
   - Um _usuário_ tem muitos _posts_;
-  - Cada _post_ pertence apenas a um _usuário_
+  - Cada _post_ pertence, apenas, a um _usuário_
 
 - **Post / Categoria (N:N)**
   - Cada _categoria_ está relacionada com vários _posts_;
