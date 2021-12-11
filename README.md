@@ -112,6 +112,6 @@ Também pode-se instalar o plugin do `ESLint` no `VSCode` (caso use essa IDE), e
 ---
 
 # Requisitos funcionais
-<a href="#sumario">Sumário</a> / <a href="https://github.com/becauro/blog_api/tree/develop"> Página inicial </a>
+<a href="#sumario">Sumário</a>
 
 Acesse o **readme** dos requisitos funcionais [aqui](Functional-Requirements.md)

@@ -1,12 +1,11 @@
 # Requisitos funcionais
 
-Aqui é descrito cada requisito funcional desse projeto.
+Nesse readme é descrito cada **requisito funcional** do projeto.
 
 ---
 
-# <span id="sumario">Sumário</span>
+## <span id="sumario">Sumário</span>
 
-- [Requisitos funcionais](#requisitos-funcionais)
   - [1 - A aplicação deve ter o endpoint POST `/user`](#1---a-aplicação-deve-ter-o-endpoint-post-user)
   - [2 - A aplicação deve ter o endpoint POST `/login`](#2---a-aplicação-deve-ter-o-endpoint-post-login)
   - [3 - A aplicação deve ter o endpoint GET `/user`](#3---a-aplicação-deve-ter-o-endpoint-get-user)
@@ -22,12 +21,12 @@ Aqui é descrito cada requisito funcional desse projeto.
   - [12 - A aplicação deve ter o endpoint DELETE `/user/me`](#12---a-aplicação-deve-ter-o-endpoint-delete-userme)
   - [13 - A aplicação deve ter o endpoint GET `post/search?q=:searchTerm`](#13---a-aplicação-deve-ter-o-endpoint-get-postsearchqsearchterm)
   
+---
+## Requisitos funcionais
 
-# Requisitos funcionais
+### 1 - A aplicação deve ter o endpoint POST `/user`
 
-## 1 - A aplicação deve ter o endpoint POST `/user`
-
-### Os seguintes pontos precisam ser implementados:
+#### Os seguintes pontos precisam ser implementados:
 
 - O endpoint deve ser capaz de adicionar um novo user a sua tabela no banco de dados;
 
@@ -64,7 +63,7 @@ Aqui é descrito cada requisito funcional desse projeto.
   ```
   _O token anterior é fictício_
 
-### Além disso, as seguintes asserções devem ser feitas:
+#### Além disso, as seguintes asserções devem ser feitas:
 
 **[Ser possível cadastrar um usuário com sucesso]**
 
@@ -120,9 +119,10 @@ Se o usuário cadastrar o campo "email" com um email que já existe, o resultado
 
 ![Usuário Existente](./public/usuariojaexistente.png)
 
-## 2 - A aplicação deve ter o endpoint POST `/login`
+### 2 - A aplicação deve ter o endpoint POST `/login`
+<a href="#sumario">Sumário</a> / <a href="https://github.com/becauro/blog_api/tree/develop"> Página inicial </a>
 
-###  Os seguintes pontos precisam ser implementados:
+####  Os seguintes pontos precisam ser implementados:
 
 - O corpo da requisição deverá seguir o formato abaixo:
 
@@ -144,7 +144,7 @@ Se o usuário cadastrar o campo "email" com um email que já existe, o resultado
   ```
   _O token anterior é fictício_
 
-### Além disso, as seguintes asserções devem ser feitas:
+#### Além disso, as seguintes asserções devem ser feitas:
 
 **[Ser possível fazer login com sucesso]**
 
@@ -186,9 +186,10 @@ Se o login for com usuário inexistente o resultado retornado deverá ser confor
 
 ![Usuário não existe](./public/usuarionaoexiste.png)
 
-## 3 - A aplicação deve ter o endpoint GET `/user`
+### 3 - A aplicação deve ter o endpoint GET `/user`
+<a href="#sumario">Sumário</a> / <a href="https://github.com/becauro/blog_api/tree/develop"> Página inicial </a>
 
-### Os seguintes pontos precisam ser implementados:
+#### Os seguintes pontos precisam ser implementados:
 
 - Deve listar todos os **Users** e retorná-los na seguinte estrutura:
 
@@ -205,7 +206,7 @@ Se o login for com usuário inexistente o resultado retornado deverá ser confor
 
 - A requisição deve ter token de autenticação nos headers e, caso contrário, retorne um código de `status 401`.
 
-### Além disso, as seguintes asserções devem ser feitas:
+#### Além disso, as seguintes asserções devem ser feitas:
 
 **[Ser possível listar todos os usuários]**
 
@@ -225,9 +226,10 @@ Se o token for inválido o resultado retornado deverá ser conforme exibido abai
 
 ![Token inválido](./public/tokeninvalido.png)
 
-## 4 - A aplicação deve ter o endpoint GET `/user/:id`
+### 4 - A aplicação deve ter o endpoint GET `/user/:id`
+<a href="#sumario">Sumário</a> / <a href="https://github.com/becauro/blog_api/tree/develop"> Página inicial </a>
 
-### Os seguintes pontos precisam ser implementados:
+#### Os seguintes pontos precisam ser implementados:
 
 - Retorna os detalhes do usuário baseado no `id` da rota. Os dados devem ter o seguinte formato:
 
@@ -242,7 +244,7 @@ Se o token for inválido o resultado retornado deverá ser conforme exibido abai
 
 - A requisição deve ter token de autenticação nos headers e, caso contrário, retorne um código de `status 401`.
 
-### Além disso, as seguintes asserções devem ser feitas:
+#### Além disso, as seguintes asserções devem ser feitas:
 
 **[Ser possível listar um usuario específico com sucesso]**
 
@@ -268,9 +270,10 @@ Se o token for inválido o resultado retornado deverá ser conforme exibido abai
 
 ![Listar um usuário com token inválido](./public/tokeninvalidoumusuario.png)
 
-## 5 - A aplicação deve ter o endpoint POST `/categories`
+### 5 - A aplicação deve ter o endpoint POST `/categories`
+<a href="#sumario">Sumário</a> / <a href="https://github.com/becauro/blog_api/tree/develop"> Página inicial </a>
 
-### Os seguintes pontos precisam ser implementados:
+#### Os seguintes pontos precisam ser implementados:
 
 - Esse endpoint deve receber uma _Categoria_ no corpo da requisição e criá-la no banco. O corpo da requisição deve ter a seguinte estrutura:
 
@@ -284,7 +287,7 @@ Se o token for inválido o resultado retornado deverá ser conforme exibido abai
 
 - A requisição deve ter o token de autenticação nos headers e, caso contrário, retorne um código de `status 401`.
 
-### Além disso, as seguintes asserções devem ser feitas:
+#### Além disso, as seguintes asserções devem ser feitas:
 
 **[Ser possível cadastrar uma categoria com sucesso]**
 
@@ -309,9 +312,10 @@ Se o token for inexistente o resultado retornado deverá ser conforme exibido ab
 
 ![Cadastrar uma categoria sem token](./public/cadastrarcategoriasemtoken.png)
 
-## 6 - A aplicação deve ter o endpoint GET `/categories`
+### 6 - A aplicação deve ter o endpoint GET `/categories`
+<a href="#sumario">Sumário</a> / <a href="https://github.com/becauro/blog_api/tree/develop"> Página inicial </a>
 
-### Os seguintes pontos precisam ser implementados:
+#### Os seguintes pontos precisam ser implementados:
 
 - Esse endpoint deve listar todas as Categorias e retorná-las na seguinte estrutura:
 
@@ -328,7 +332,7 @@ Se o token for inexistente o resultado retornado deverá ser conforme exibido ab
 ]
 ```
 
-### Além disso, as seguintes asserções devem ser feitas:
+#### Além disso, as seguintes asserções devem ser feitas:
 
 **[Ser possível listar todas as categoria com sucesso]**
 
@@ -350,9 +354,10 @@ Se o token for inexistente o resultado retornado deverá ser conforme exibido ab
 ![Buscar uma categoria sem token](./public/buscarcategoriasemtoken.png)
 
 
-## 7 - A aplicação deve ter o endpoint POST `/post`
+### 7 - A aplicação deve ter o endpoint POST `/post`
+<a href="#sumario">Sumário</a> / <a href="https://github.com/becauro/blog_api/tree/develop"> Página inicial </a>
 
-### Os seguintes pontos precisam ser implementados:
+#### Os seguintes pontos precisam ser implementados:
 
 - Esse endpoint deve receber um _BlogPost_ no corpo da requisição e criá-lo no banco. O corpo da requisição deve ter a seguinte estrutura:
 
@@ -368,7 +373,7 @@ Se o token for inexistente o resultado retornado deverá ser conforme exibido ab
 
 - A requisição deve ter o token de autenticação nos headers e, caso contrário, retorne um código de `status 401`.
 
-### Além disso, as seguintes asserções devem ser feitas:
+#### Além disso, as seguintes asserções devem ser feitas:
 
 **[Ser possível cadastrar um blogpost com sucesso]**
 
@@ -412,9 +417,10 @@ Se o token for inválido o resultado retornado deverá ser conforme exibido abai
 
 ![blogpost com token inválido](./public/criarposttokeninvalido.png)
 
-## 8 - A aplicação deve ter o endpoint GET `/post`
+### 8 - A aplicação deve ter o endpoint GET `/post`
+<a href="#sumario">Sumário</a> / <a href="https://github.com/becauro/blog_api/tree/develop"> Página inicial </a>
 
-### Os seguintes pontos precisam ser implementados:
+#### Os seguintes pontos precisam ser implementados:
 
 - Esse endpoint deve listar todos os _BlogPosts_ e retorná-los na seguinte estrutura:
 
@@ -443,7 +449,7 @@ Se o token for inválido o resultado retornado deverá ser conforme exibido abai
 ]
 ```
 
-### Além disso, as seguintes asserções devem ser feitas:
+#### Além disso, as seguintes asserções devem ser feitas:
 
 **[Ser possível listar blogpost com sucesso]**
 
@@ -463,9 +469,10 @@ Se o token for inválido o resultado retornado deverá ser conforme exibido abai
 
 ![blogpost com token inválido](./public/listarposttokeninvalido.png)
 
-## 9 - A aplicação deve ter o endpoint GET `post/:id`
+### 9 - A aplicação deve ter o endpoint GET `post/:id`
+<a href="#sumario">Sumário</a> / <a href="https://github.com/becauro/blog_api/tree/develop"> Página inicial </a>
 
-### Os seguintes pontos precisam ser implementados:
+#### Os seguintes pontos precisam ser implementados:
 
 - Retorna um **BlogPost** com o `id` especificado. O retorno deve ter os seguinte formato:
 
@@ -492,7 +499,7 @@ Se o token for inválido o resultado retornado deverá ser conforme exibido abai
 }
 ```
 
-### Além disso, as seguintes asserções devem ser feitas:
+#### Além disso, as seguintes asserções devem ser feitas:
 
 **[Ser possível listar um blogpost com sucesso]**
 
@@ -520,9 +527,10 @@ Se o id do post for inválido o resultado retornado deverá ser conforme exibido
 
 
 
-## 10 - A aplicação deve ter o endpoint PUT `/post/:id`
+### 10 - A aplicação deve ter o endpoint PUT `/post/:id`
+<a href="#sumario">Sumário</a> / <a href="https://github.com/becauro/blog_api/tree/develop"> Página inicial </a>
 
-### Os seguintes pontos precisam ser implementados:
+#### Os seguintes pontos precisam ser implementados:
 
 - O endpoint deve receber um **BlogPost** que irá sobrescrever o original com o `id` especificado na URL. Só deve ser permitido para o usuário que criou o **BlogPost**.
 
@@ -543,7 +551,7 @@ Se o id do post for inválido o resultado retornado deverá ser conforme exibido
 
 - Caso o post não contenha o `title` e/ou o `content` a API deve retornar um erro de `status 400`.
 
-### Além disso, as seguintes asserções devem ser feitas:
+#### Além disso, as seguintes asserções devem ser feitas:
 
 **[Ser possível editar um blogpost com sucesso]**
 
@@ -590,9 +598,10 @@ Se não conter o campo `content` o resultado retornado deverá ser conforme exib
 
 
 
-## 11 - A aplicação deve ter o endpoint DELETE `post/:id`
+### 11 - A aplicação deve ter o endpoint DELETE `post/:id`
+<a href="#sumario">Sumário</a> / <a href="https://github.com/becauro/blog_api/tree/develop"> Página inicial </a>
 
-### Os seguintes pontos precisam ser implementados:
+#### Os seguintes pontos precisam ser implementados:
 
 - Deleta o post com o `id` especificado. Só deve ser permitido para o usuário que criou o **BlogPost**.
 
@@ -602,7 +611,7 @@ Se não conter o campo `content` o resultado retornado deverá ser conforme exib
 
 - Caso o post referido não exista, deve-se retornar um código de `status 404`.
 
-### Além disso, as seguintes asserções devem ser feitas:
+#### Além disso, as seguintes asserções devem ser feitas:
 
 **[Ser possível deletar um blogpost com sucesso]**
 
@@ -634,13 +643,14 @@ Se o token for inválido o resultado retornado deverá ser conforme exibido abai
 
 ![blogpost com token inválido](./public/deletarpostcomtokeninvalido.png)
 
-## 12 - A aplicação deve ter o endpoint DELETE `/user/me`
+### 12 - A aplicação deve ter o endpoint DELETE `/user/me`
+<a href="#sumario">Sumário</a> / <a href="https://github.com/becauro/blog_api/tree/develop"> Página inicial </a>
 
-### Os seguintes pontos precisam ser implementados:
+#### Os seguintes pontos precisam ser implementados:
 
 - Utilizando o token de autenticação nos headers, o usuário correspondente deve ser apagado.
 
-### Além disso, as seguintes asserções devem ser feitas:
+#### Além disso, as seguintes asserções devem ser feitas:
 
 **[Ser possível excluir meu usuário com sucesso]**
 
@@ -660,9 +670,10 @@ Se não conter o token o resultado retornado deverá ser conforme exibido abaixo
 
 ![Deletar sem token](./public/deletarsemtoken.png)
 
-## 13 - A aplicação deve ter o endpoint GET `post/search?q=:searchTerm`
+### 13 - A aplicação deve ter o endpoint GET `post/search?q=:searchTerm`
+<a href="#sumario">Sumário</a> / <a href="https://github.com/becauro/blog_api/tree/develop"> Página inicial </a>
 
-### Os seguintes pontosprecisam ser implementados:
+#### Os seguintes pontosprecisam ser implementados:
 
 - Retorna uma array de **BlogPosts** que contenham em seu título, ou conteúdo, o termo pesquisado no `queryParam` da URL. O retorno deve ter o seguinte formato:
 
@@ -693,7 +704,7 @@ Se não conter o token o resultado retornado deverá ser conforme exibido abaixo
 
 - Caso nenhum **BlogPost** satisfaça a busca, retorne um array vazio.
 
-### Além disso, as seguintes asserções  devem ser feitas:
+#### Além disso, as seguintes asserções  devem ser feitas:
 
 **[Ser possível buscar um blogpost pelo `title`]**
 
@@ -730,3 +741,7 @@ Se não contém o token o resultado retornado deverá ser conforme exibido abaix
 Se o token for inválido o resultado retornado deverá ser conforme exibido abaixo, com um status http `401`:
 
 ![blogpost com token inválido](./public/buscarpostcomtokeninvalido.png)
+
+---
+
+<a href="#sumario">Sumário</a> / <a href="https://github.com/becauro/blog_api/tree/develop"> Página inicial </a>
