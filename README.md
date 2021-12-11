@@ -19,25 +19,28 @@ Nessa API é possível **criar**, **visualizar**, **deletar** e **atualizar** os
   
 ## Habilidades 
 
-Nesse projeto, foi construído um back-end usando `ORM` com o pacote `sequelize` do `npm`, tendo por objetivo ser capaz de:
+Nesse projeto, foi construído um back-end usando `ORM` com o pacote `sequelize` do `npm`, tendo por objetivo ser capaz de praticar as skills como:
  - Criar e associar tabelas usando `models` do `sequelize`;
- - Construir endpoints para consumir os models que criados; 
- - Fazer um `CRUD` com completo usando o `ORM`.
+ - Construir endpoints para consumir os models criados; 
+ - Fazer um `CRUD` moderno e completo usando o `ORM`.
 
 
 ## Descrição
 
-Se trata de uma API de um CRUD de posts e usuários de um blog (com o sequelize). Começando pela API, foi desenvolvido alguns endpoints (seguindo os princípios do REST) que estarão conectados ao seu banco de dados. Aplicando, também, alguns princípios SOLID!
+Se trata de uma API de um CRUD de posts e usuários de um blog. Começando pela API, foi desenvolvido alguns endpoints (seguindo os princípios do REST) que estarão conectados ao seu banco de dados. Aplicando, também, alguns princípios SOLID!
 
-Primeiro, foi criado uma tabela para os usuários que desejam se cadastrar na aplicação. Após isso, criado uma tabela de Categorias para seus Posts, outra para guardandar todas as informações dos posts realizados na plataforma. Por fim uma tabela de junção para relacionar Posts com categorias. Ou seja, um post pode ter mais que uma categoria.
+Primeiro, foi criado uma tabela para os usuários que desejam se cadastrar na aplicação. Após isso, foi criado uma tabela de Categorias para seus Posts, outra para guardar todas as informações dos posts realizados na plataforma. Por fim uma tabela de junção para relacionar Posts com categorias. Ou seja, um post pode ter mais que uma categoria.
 
-Cada usuário além de criar seus posts, só podem atualizar e excluir seus próprios posts, bem como o único que pode excluir a sua conta de login do sistema.
+Cada usuário, além de criar seus posts, só podem atualizar e excluir seus próprios posts, bem como é o único capaz de excluir a sua conta de login do sistema.
 
 Cada post tem referência ao usuário que o criou.
 Portanto existem as seguintes referências no schema do banco:
 
-- Usuário / Post
-- Post / Categoria
+- **Usuário / Post (1:N)**
+  - Um _usuário_ tem muitos posts  e cada _post_ pertence a um _usuário_
+- **Post / Categoria (N:N)**
+  - Cada _categoria_ está relacionada com vários posts
+  - Cada _post_ pode ter várias _categorias_
 
 ---
 
