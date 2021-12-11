@@ -38,6 +38,7 @@ Portanto existem as seguintes referências no schema do banco:
 
 
 # Linter
+<a href="#sumario">Sumário</a>
 
 Para garantir a qualidade do código, usaremos o [ESLint](https://eslint.org/) para fazer a sua análise estática.
 
@@ -51,6 +52,7 @@ Também pode-se instalar o plugin do `ESLint` no `VSCode` (caso use essa IDE), e
 ---
 
 # Observações:
+<a href="#sumario">Sumário</a>
 
 ## Estrutura da lista de requsitos funcionais
 
@@ -58,7 +60,7 @@ Também pode-se instalar o plugin do `ESLint` no `VSCode` (caso use essa IDE), e
 
 ## Dados de testes no banco
 
-- Há um arquivo na pasta `/seeders` dentro dela irá conter as querys para inserir no banco `não remova ela o avaliador irá usar ela`.
+- Há um arquivo na pasta `/seeders` dentro dela irá há querys para inserir dados no banco para que se possa utilizar aplicação com alguns dados (fictícios) no banco. 
 
 ## A estrutura do banco de dados:
 
@@ -110,6 +112,6 @@ Também pode-se instalar o plugin do `ESLint` no `VSCode` (caso use essa IDE), e
 ---
 
 # Requisitos funcionais
-
+<a href="#sumario">Sumário</a> / <a href="https://github.com/becauro/blog_api/tree/develop"> Página inicial </a>
 
 Acesse o **readme** dos requisitos funcionais [aqui](Functional-Requirements.md)
