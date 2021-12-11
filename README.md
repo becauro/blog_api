@@ -19,10 +19,13 @@ Nessa API é possível **criar**, **visualizar**, **deletar** e **atualizar** os
   
 ## Habilidades 
 
-Nesse projeto, foi construído um back-end usando `ORM` com o pacote `sequelize` do `npm`, tendo por objetivo praticar skills como:
- - Criar e associar tabelas usando `models` do `sequelize`;
- - Construir endpoints para consumir os models criados; 
- - Fazer um `CRUD` moderno e completo usando o `ORM`.
+Nesse projeto, foi construído um API usando `ORM` com o pacote `sequelize` do `npm`, tendo por objetivo praticar skills como:
+ - Construção de uma API RESTful;
+ - Utilização de conceitos SOLID;
+ - Implementação de autenticações e autorizações de usuários; 
+ - Criação e associação de tabelas usando `models` do `sequelize`;
+ - Construção de endpoints que utilizem os models criados; 
+ - Construção de um `CRUD` moderno e completo com uma`ORM`.
 
 
 ## Descrição
