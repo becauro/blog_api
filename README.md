@@ -167,5 +167,5 @@ Alternativamente pode-se instalar o plugin do `ESLint` no `VSCode` (caso use ess
 
 ## Requisitos funcionais
 <a href="#sumario">Sumário</a>
-
-Acesse  [aqui](Functional-Requirements.md) o **readme** dos requisitos funcionais.
+Para entender melhor a lógica por trás do código de desenvolvimento da API, é interessante olhar a _Requisitos funcionais_ do projeto.
+Acesse  [aqui](Functional-Requirements.md) o **readme** desses _Requisitos Funcionais_.
