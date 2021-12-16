@@ -8,6 +8,7 @@ Nessa API é possível **criar**, **visualizar**, **deletar** e **atualizar** os
 
 - [Habilidades](#habilidades)
 - [Descrição](#descrição)
+- [Requisitos de usuário](#requisitos-de-usuário)
 - [Arquitetura e padrões](#arquitetura-e-padroes)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
 - [Dependências](#dependencias)
@@ -35,6 +36,8 @@ Se trata de uma API que manipula **posts** e **usuários criadores dos posts** d
 Começando pela API, foi desenvolvido alguns ENDPOINTS seguindo os princípios do REST que se conectam a um banco de dados relacional.
 
 Primeiro, foi criado uma tabela para os usuários que desejam se cadastrar na aplicação afim de criarem posts no Blog. Após isso, uma tabela de Categorias também foi criada para se relacionar com cada Posts e então outra é criada para guardar todas as informações dos posts que vão sendo criados na plataforma. Por fim uma última tabela foi necessária para se implementar o relacionamento entre Posts e categorias. Ou seja, um post pode ter mais que uma categoria e vice-versa.
+
+## Requisitos de Usuário
 
 Cada usuário, além de criar seus posts, é capaz de atualizar e excluir seus próprios posts, bem como é o único que consegue apagar sua própria conta do sistema.
 
