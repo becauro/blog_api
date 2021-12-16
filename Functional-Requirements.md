@@ -1,5 +1,5 @@
 # Requisitos funcionais
-<a href="https://github.com/becauro/blog_api/tree/develop"> Página inicial </a>
+<a href="https://github.com/becauro/blog_api"> Página inicial </a>
 
 Nesse readme é descrito cada **requisito funcional** do projeto.
 
