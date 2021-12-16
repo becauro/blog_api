@@ -15,7 +15,7 @@ Nessa API é possível **criar**, **visualizar**, **deletar** e **atualizar** os
 - [Requisitos para execução e consumo da API](#requisitos-execucao)
 - [Como executar o projeto](#como-executar-o-projeto)
 - [Linter](#linter)
-- [Observações](#-observações)
+- [Observações](#observações)
 - [Requisitos funcionais](#requisitos-funcionais)
   
 ## Habilidades 
@@ -108,7 +108,7 @@ Alternativamente pode-se instalar o plugin do `ESLint` no `VSCode` (caso use ess
 
 ---
 
-## Observações:
+## Observações
 <a href="#sumario">Sumário</a>
 
 ### Estrutura da lista de requisitos funcionais
